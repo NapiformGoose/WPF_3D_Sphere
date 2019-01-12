@@ -1,0 +1,42 @@
+﻿<Window x:Class="SphereAndMesh.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:SphereAndMesh"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Width="200">
+                <TextBox Text="Radius of the Sphere" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" Height="80"  Foreground="#FF1B3E6C" BorderBrush="{x:Null}"/>
+                <TextBox x:Name="BoxR" Height="40" FontSize="30" TextAlignment="Center" Foreground="White"  Margin="10" Background="#FF1B3E6C" Width="100" BorderThickness="1.5" BorderBrush="#FF7B9DB0" />
+            </StackPanel >
+            <StackPanel Width="250">
+                <TextBox Text="Number of Y-axis segments" TextWrapping="Wrap" Width="230" Height="80" FontSize="25" TextAlignment="Center" Foreground="#FF1B3E6C" BorderBrush="{x:Null}"/>
+                <TextBox x:Name="BoxN" Height="40" FontSize="30" TextAlignment="Center" Foreground="White"  Margin="10" Background="#FF1B3E6C" Width="100" BorderThickness="1.5" BorderBrush="#FF7B9DB0" />
+            </StackPanel>
+            <StackPanel Width="250">
+                <TextBox Text="Number of X-axis segments" TextWrapping="Wrap" Width="230" Height="80" FontSize="25" TextAlignment="Center" Foreground="#FF1B3E6C" BorderBrush="{x:Null}"/>
+                <TextBox x:Name="Boxn" Height="40" FontSize="30" TextAlignment="Center" Foreground="White"  Margin="10" Background="#FF1B3E6C" Width="100" BorderThickness="1.5" BorderBrush="#FF7B9DB0" />
+            </StackPanel>
+            <StackPanel Width="250">
+                <Button Name="CalcAndDraw" Height="50" Width="150" Margin="20" Background="#FF18806B" BorderBrush="{x:Null}" Foreground="#FFE2E3E4" Click="CalcAndDraw_Click">
+                    <TextBlock  Text="Draw" Width="100" TextAlignment="Center" FontSize="30"/>
+                </Button>
+                <Button Name="Refresh" Height="50" Width="150"  Background="#FF18806B" BorderBrush="{x:Null}" Foreground="#FFE2E3E4" Click="Refresh_Click">
+                    <TextBlock  Text="Refresh" Width="100" TextAlignment="Center" FontSize="30"/>
+                </Button>
+            </StackPanel>
+           
+        </StackPanel>
+        <Viewport3D Grid.Row="1" Name="mainViewport">
+
+        </Viewport3D>
+    </Grid>
+</Window>
